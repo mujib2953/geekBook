@@ -14,7 +14,13 @@
 
 
 <ion-content padding>
-	<div class="conatainer">
-		
+	<div class="bg"></div>
+
+	<div class="buttonContainer">
+		<button ion-button round full (click)="gotoPage( 'MathsPage' )"> Mathematics </button>
+		<button ion-button round full (click)="gotoPage( 'phy' )"> Physics </button>
+		<button ion-button round full (click)="gotoPage( 'chem' )"> Chemistry </button>
+		<button ion-button round full (click)="gotoPage( 'other' )"> Other Data </button>
+		<button ion-button round full (click)="gotoPage( 'conv' )"> Data convertions </button>
 	</div>
 </ion-content>

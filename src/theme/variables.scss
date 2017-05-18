@@ -3,6 +3,7 @@
 $font-path: "../assets/fonts";
 
 @import "ionic.globals";
+@import "common";
 
 
 // Shared Variables
@@ -30,7 +31,6 @@ $colors: (
   light:      #f4f4f4,
   dark:       #222
 );
-
 
 // App iOS Variables
 // --------------------------------------------------

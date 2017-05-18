@@ -1,0 +1,20 @@
+/*
+* @Author: mujibur
+* @Date:   2017-05-18 13:15:19
+* @Last Modified by:   mujibur
+* @Last Modified time: 2017-05-18 17:18:48
+*/
+$darkGreen: #014d41;
+$white: #FFF;
+$black: #000;
+
+.toolbar-background-ios,.toolbar-background-md {
+	background-color: $darkGreen !important;
+    
+}
+.toolbar-title-ios, .toolbar-title-md {
+	color: $white !important; 
+}
+.bar-button-default-ios, .bar-button-default-md {
+	color: $white !important;
+}
