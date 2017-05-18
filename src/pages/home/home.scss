@@ -1,0 +1,9 @@
+page-home {
+	ion-content {
+		background: url( '../assets/images/home_bg.jpg' ) no-repeat;
+	    background-size: 100% 100%;
+	}
+	.scroll-content {
+		overflow: hidden;
+	}
+}
