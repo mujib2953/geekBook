@@ -9,15 +9,20 @@ import { MyApp } from './app.component';
 
 import { HomePage } from '../pages/home/home';
 import { SubHome } from '../pages/sub-home/sub-home';
-
+import { MathsPage } from '../pages/maths-page/maths-page';
+import { IndicesAlgPage } from '../pages/indices-alg-page/indices-alg-page';
 import { SharedService } from '../providers/shared-service';
+
+import { BgComponent } from '../components/bg-component/bg-component';
 
 @NgModule({
   declarations: [
     MyApp,
+    BgComponent,
     HomePage,
     SubHome,
-    // MathsPage
+    MathsPage,
+    IndicesAlgPage
   ],
   imports: [
     BrowserModule,
@@ -29,7 +34,8 @@ import { SharedService } from '../providers/shared-service';
     MyApp,
     HomePage,
     SubHome,
-    // MathsPage
+    MathsPage,
+    IndicesAlgPage
   ],
   providers: [
     StatusBar,

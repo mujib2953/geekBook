@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
-import { SubHome } from './sub-home';
+import { BgComponent } from './bg-component';
 
 @NgModule({
   declarations: [
-    SubHome,
+    BgComponent,
   ],
   imports: [
-    IonicPageModule.forChild(SubHome),
+    IonicPageModule.forChild(BgComponent),
   ],
   exports: [
-    SubHome
+    BgComponent
   ]
 })
-export class SubHomeModule {}
+export class BgComponentModule {}

@@ -1,7 +1,10 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 
 import { MathsPage } from '../maths-page/maths-page';
+
+// --- Service
+import { SharedService } from '../../providers/shared-service';
 
 /**
  * Generated class for the SubHome page.
@@ -9,7 +12,6 @@ import { MathsPage } from '../maths-page/maths-page';
  * See http://ionicframework.com/docs/components/#navigation for more info
  * on Ionic pages and navigation.
  */
-@IonicPage()
 @Component({
   selector: 'page-sub-home',
   templateUrl: 'sub-home.html',
@@ -18,11 +20,10 @@ export class SubHome {
 
 	constructor(
 		public navCtrl: NavController, 
-		public navParams: NavParams
-	) {
+		public navParams: NavParams,
 
-		// this.navCtrl.setRoot( SubHome );
-	}
+		public shareService: SharedService
+	) {}
 
 	ionViewDidLoad() {
 		console.log('ionViewDidLoad SubHome');
@@ -30,7 +31,21 @@ export class SubHome {
 
 	gotoPage( pageName: string ): void {
 
-		this.navCtrl.push( pageName );
+		let page: any;
+		switch( pageName ) {
+
+			case 'MathsPage':
+				page = MathsPage; 
+			break;
+
+			default:
+				console.log( pageName +' not found.' );
+			break;
+
+		}
+
+		if( page )
+			this.navCtrl.push( page );
 
 	};
 }

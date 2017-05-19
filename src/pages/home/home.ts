@@ -16,12 +16,24 @@ export class HomePage {
 		public shareService: SharedService
 	) {
 
-		let scope: any = this;
+		let b4ReadFile: any = Date.now(),
+			afterReadFile: any;
 
 		this.shareService.readJson( this, function() {
-			this.navCtrl.setRoot( SubHome, {}, {animate: true, direction: "forward"});
-		} );
 
+			afterReadFile = Date.now();
+			if( ( afterReadFile - b4ReadFile ) / 1000 > 30 )
+				this.gotoHome();
+			else 
+				setTimeout( ()=> {
+					this.gotoHome();
+				}, 2000 );
+
+			
+		} );
 	}
 
+	gotoHome(): void {
+		this.navCtrl.setRoot( SubHome, {}, {animate: true, direction: "forward"});
+	}
 }
